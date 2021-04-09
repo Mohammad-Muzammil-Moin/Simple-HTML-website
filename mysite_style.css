@@ -1,0 +1,636 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Black+And+White+Picture|Montserrat+Subrayada|Orbitron|Stylish&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+/*  header section*/
+
+/*@media  and screen(max-width: 788px){*/
+
+header {
+  /*background-color:rgba(130,130,130,0.3);*/
+  background-color: black;
+  /*opacity: .4;*/
+  position: fixed;
+  height: 70px;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+}
+
+#content {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 10px;
+  height: 94px;
+  font-weight: bolder;
+}
+
+.logo h1 {
+  font-size: 3.4rem;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 1px 1px 5px crimson;
+  transform: skew(21deg, 10deg);
+  font-size: 3.4rem;
+  transition: text-shadow 0.5s linear;
+  margin-right: 10px;
+}
+
+#content a {
+  text-decoration: none;
+}
+
+h1 sub {
+  color: black;
+  transition: text-shadow 0.5s linear;
+  text-shadow: 1px 1px 2px crimson;
+}
+
+h1 sub:hover {
+  color: white;
+  transition: text-shadow 0.5s linear;
+  text-shadow: 1px 1px 12px crimson;
+}
+
+h1:hover {
+  color: black;
+  text-shadow: 1px 1px 2px crimson;
+}
+
+.nav {
+  margin-bottom: 20px;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  /*margin-right: 10px;*/
+}
+
+.nav a {
+  /*margin-left: 20px;*/
+  font-size: 17px;
+  font-family: Orbitron, Montserrat Subrayada, Black And White Picture, Stylish;
+
+  /*font-family: 'Sansita Swashed', cursive;*/
+  letter-spacing: 0.1rem;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  padding: 2px;
+  text-transform: capitalize;
+  /*border-radius: */
+  background: none;
+  transition: all 0.3s linear;
+}
+
+.nav a:hover {
+  text-shadow: -15px -15px 3px white;
+  box-shadow: none;
+  letter-spacing: 0.1rem;
+  /*color: rgb(157, 0, 133);*/
+  color: crimson;
+}
+
+.nav a:before {
+  display: inline-block;
+  content: "";
+  width: 0%;
+  height: 5px;
+  position: absolute;
+  top: 110%;
+  left: 0px;
+  border-bottom: 1px solid crimson;
+  color: white;
+  transition: all 0.3s linear;
+}
+
+.nav a:hover:before {
+  width: 100%;
+}
+
+input[type="text"] {
+  letter-spacing: 1.6rem;
+  font-weight: normal;
+  color: white;
+  border-bottom: 1px solid crimson;
+  border-radius: 20px;
+  background-color: transparent;
+  height: 12px;
+  border-radius: 40px;
+  padding: 10px;
+  transition: letter-spacing 1.1s linear;
+  margin-top: 20px;
+}
+
+input[type="text"]:hover {
+  color: crimson;
+  outline: none;
+  /*border: none;*/
+}
+
+input[type="text"]:focus {
+  color: crimson;
+
+  outline: none;
+  letter-spacing: 0.1rem;
+}
+
+::placeholder {
+  color: silver;
+  text-shadow: 1px 1px 2px white;
+}
+
+.container {
+  height: 150vh;
+  width: 100%;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#hero {
+  z-index: 1;
+  /* animation-name: bgc; */
+  /* animation-fill-mode: forwards; */
+  /* animation-play-state: running; */
+  /* animation-timing-function: ease; */
+  /* animation-direction: alternate; */
+  /* animation-iteration-count: infinite; */
+  /* animation-duration: 30s; */
+
+  /*transition: animation 1s ease; */
+  position: relative;
+  background: url("./19187757.jpg");
+  opacity: 9;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* transition: 5s ease-in; */
+  height: 800px;
+}
+
+#hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+#hero h1 {
+  display: block;
+  width: fit-content;
+  font-size: 2.5rem;
+  position: relative;
+  color: transparent;
+  text-shadow: none;
+  word-spacing: 0.1rem;
+  letter-spacing: 0.4rem;
+  font-family: Orbitron, Montserrat Subrayada, Black And White Picture, Stylish;
+  animation: text_reveal 0.4s ease forwards;
+}
+
+#hero h1 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 10px;
+  background: linear-gradient(#dc143c, black);
+  animation: reveal_text_box 1s ease;
+}
+
+#hero h1:nth-child(1) {
+  animation-delay: 1.5s;
+}
+
+#hero h1:nth-child(2) {
+  animation-delay: 2.28s;
+}
+
+#hero h1:nth-child(3) {
+  animation: textreveal 0.4s ease forwards;
+
+  animation-delay: 3.28s;
+  color: transparent;
+
+  animation-direction: alternate;
+}
+
+#hero h1:nth-child(1) span {
+  animation-delay: 1s;
+}
+
+#hero h1:nth-child(2) span {
+  animation-delay: 2s;
+}
+
+#hero h1:nth-child(3) span {
+  animation: revealtextbox 1s ease;
+  animation-delay: 2.9s;
+}
+
+.call_to_action {
+  display: inline-block;
+
+  width: 196px;
+  height: 42px;
+  padding: -8px 30px;
+  color: #dc143c;
+  background: transparent;
+  border-bottom: 2px solid #000;
+  font-weight: bolder;
+  border-top: 2px solid transparent;
+  max-width: 310px;
+  text-decoration: none;
+  font-size: 1.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 30px;
+  text-shadow: 1px 1px 2px black;
+  transition: 0.5s ease;
+  transition-property: background, color, text-shadow font-weight border-bottom;
+}
+.call_to_action:hover {
+  color: black;
+  outline: none;
+
+  font-weight: lighter;
+}
+.call_to_action:hover {
+  background: black;
+  color: white;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+  border-radius: 30px;
+  border-bottom: 2px solid #000;
+}
+
+.call_to_action:active {
+  color: black;
+}
+
+/*services section */
+
+.services {
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  padding: 200px 0;
+}
+
+.section_title {
+  position: relative;
+  bottom: 30px;
+  font-size: 3.3rem;
+  font-weight: 300;
+  overflow: hidden;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  border-bottom: 1px solid crimson;
+  transition: font-size 0.3s ease;
+}
+
+.section_title span {
+  color: #dc143c;
+  border-bottom: 1px solid #000;
+  overflow: hidden;
+}
+
+.service_top {
+  height: 605px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /*  max-width: 500px;*/
+}
+
+.service_top p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #000;
+  line-height: 30px;
+  padding-bottom: 30px;
+  letter-spacing: 0.05rem;
+}
+
+/*end services section */
+
+/**/
+.pd span {
+  color: crimson;
+}
+
+.pd {
+  padding: 100px 0px;
+  display: block;
+
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: 1px 2px 2px black;
+}
+.search img {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 22px;
+}
+.pd:hover {
+  text-shadow: 1px 2px 2px black;
+}
+
+.portfolio {
+  background: url(https://jujumagumbolaw.files.wordpress.com/2015/04/cover-black.jpg?w=1038&h=576&crop=1);
+  height: 309px;
+  /* background-image: url(https://besthqwallpapers.com/Temp/7-10-2020/orange-neon-lights-4k-abstract-art-creative-orange-lines-besthqwallpapers.com-2048x1536.jpg); */
+  background-size: cover;
+  /* box-shadow: 2px 2px 5px crimson, -3px -2px 2px black; */
+  border-radius: 5px;
+  transition: all 0.3s linear;
+  border-radius: -11px;
+}
+
+.portfolio:hover {
+  box-shadow: 10px 10px 12px gray;
+  transform: skew(2deg);
+}
+
+.heading {
+  margin: 50px;
+}
+
+.heading p {
+  color: white;
+  font-style: italic;
+  font-family: monospace;
+  /*letter-spacing: .1rem;*/
+  width: 230px;
+}
+
+.heading h1 {
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-family: "Sansita Swashed", cursive;
+}
+
+/*
+button {
+   
+    position: relative;
+    top: 100px;
+    width: 258px;
+    height: 56px;
+    font-size: 23px;
+}
+*/
+
+#third_section {
+  height: 450px;
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+}
+
+/*icons Css*/
+
+.icons8-twitter {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMjQiIGhlaWdodD0iMjQiCnZpZXdCb3g9IjAgMCAyMjYgMjI2IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDIyNnYtMjI2aDIyNnYyMjZ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTIyNiw0MC40OTkwMmMtOC40NjAyOCwzLjc1MTk2IC0xNi45NTczNSw2LjU4NDMxIC0yNi4zNzQwMiw3LjU0MDdjOS40MTY2NywtNS42NjQ3MiAxNi45NTczNSwtMTUuMDgxMzggMjAuNzA5MzEsLTI1LjQ1NDQzYy05LjQxNjY3LDUuNjY0NzEgLTE4LjgzMzMzLDkuNDE2NjcgLTI5LjE2OTYsMTEuMzI5NDNjLTkuNDE2NjcsLTkuNDE2NjcgLTIxLjY2NTY5LC0xNS4wODEzOCAtMzQuODM0MywtMTUuMDgxMzhjLTI1LjQ1NDQzLDAgLTQ2LjE2Mzc0LDIwLjcwOTMxIC00Ni4xNjM3NCw0Ni4xMjY5NmMwLDMuNzg4NzMgMCw3LjU0MDY5IDAuOTU2MzgsMTAuMzczMDRjLTM4LjYyMzA0LC0xLjg3NTk4IC03Mi41MDA5NywtMTkuNzg5NzEgLTk1LjEyMzA0LC00OC4wMzk3MWMtNC43MDgzMyw2LjYyMTA5IC02LjU4NDMxLDE1LjA4MTM4IC02LjU4NDMxLDIzLjU0MTY3YzAsMTYuMDM3NzYgOC40NjAyOSwzMC4xNjI3NiAyMC43MDkzMSwzOC42MjMwNGMtNy41NDA2OSwtMC45NTYzOCAtMTUuMDQ0NTksLTIuODMyMzUgLTIwLjcwOTMxLC01LjY2NDcxYzAsMCAwLDAgMCwwLjk1NjM4YzAsMjIuNTg1MjkgMTYuMDAwOTgsNDEuNDE4NjIgMzYuNzEwMjksNDUuMjA3MzVjLTMuNzUxOTYsMC45MTk2IC03LjUwMzkxLDEuODc1OTggLTEyLjIxMjI0LDEuODc1OThjLTIuODMyMzYsMCAtNS42NjQ3MiwwIC04LjQ5NzA3LC0wLjk1NjM4YzUuNjY0NzEsMTguODMzMzMgMjIuNjIyMDcsMzIuMDM4NzMgNDMuMzMxMzgsMzIuMDM4NzNjLTE2LjAwMDk3LDEyLjI0OTAzIC0zNS43OTA2OSwxOS43NTI5NCAtNTcuNDU2MzgsMTkuNzUyOTRjLTMuNzUxOTYsMCAtNy41NDA2OSwwIC0xMS4yOTI2NSwtMC45MTk2YzIwLjcwOTMxLDEzLjE2ODYyIDQ1LjIwNzM1LDIwLjcwOTMxIDcwLjYyNSwyMC43MDkzMWM4NS43MDYzOCwwIDEzMS44MzMzMywtNzAuNjI1IDEzMS44MzMzMywtMTMxLjgzMzMzYzAsLTEuODc1OTggMCwtMy43NTE5NSAwLC01LjY2NDcxYzkuNDE2NjcsLTYuNTg0MzEgMTYuOTU3MzUsLTE1LjA0NDYgMjMuNTQxNjcsLTI0LjQ2MTI3Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4=")
+    50% 50% no-repeat;
+  background-size: 100%;
+}
+
+.icons8-facebook {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMjQiIGhlaWdodD0iMjQiCnZpZXdCb3g9IjAgMCAyMjYgMjI2IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDIyNnYtMjI2aDIyNnYyMjZ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTExMywwYy02Mi40MDQyNSwwIC0xMTMsNTAuNTk1NzUgLTExMywxMTNjMCw1Ni42NTA2NyA0MS43MzQ2NywxMDMuNDMyNjcgOTYuMTA2NSwxMTEuNjA2MzN2LTgxLjY2MTMzaC0yNy45NTgwOHYtMjkuNzAwMTdoMjcuOTU4MDh2LTE5Ljc2NTU4YzAsLTMyLjcyMjkyIDE1Ljk0MjQyLC00Ny4wODMzMyA0My4xMzc3NSwtNDcuMDgzMzNjMTMuMDIzMjUsMCAxOS45MTYyNSwwLjk2OTkyIDIzLjE3NDQyLDEuNDAzMDh2MjUuOTI0MDhoLTE4LjU1MDgzYy0xMS41NDQ4MywwIC0xNS41NzUxNywxMC45NTE1OCAtMTUuNTc1MTcsMjMuMjg3NDJ2MTYuMjM0MzNoMzMuODM0MDhsLTQuNTg1OTIsMjkuNzAwMTdoLTI5LjI0ODE3djgxLjg5Njc1YzU1LjE1MzQyLC03LjQ3NjgzIDk3LjcwNzMzLC01NC42MzU1IDk3LjcwNzMzLC0xMTEuODQxNzVjMCwtNjIuNDA0MjUgLTUwLjU5NTc1LC0xMTMgLTExMywtMTEzeiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+")
+    50% 50% no-repeat;
+  background-size: 100%;
+}
+
+.icons8-instagram {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMjQiIGhlaWdodD0iMjQiCnZpZXdCb3g9IjAgMCAyMjYgMjI2IgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDIyNnYtMjI2aDIyNnYyMjZ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTc3LjY4NzUsMjMuNTQxNjdjLTI5Ljg1NTU0LDAgLTU0LjE0NTgzLDI0LjI5MDI5IC01NC4xNDU4Myw1NC4xNDU4M3Y3MC42MjVjMCwyOS44NTU1NCAyNC4yOTAyOSw1NC4xNDU4MyA1NC4xNDU4Myw1NC4xNDU4M2g3MC42MjVjMjkuODU1NTQsMCA1NC4xNDU4MywtMjQuMjkwMjkgNTQuMTQ1ODMsLTU0LjE0NTgzdi03MC42MjVjMCwtMjkuODU1NTQgLTI0LjI5MDI5LC01NC4xNDU4MyAtNTQuMTQ1ODMsLTU0LjE0NTgzek0xNjAuMDgzMzMsNTYuNWM1LjIwMjcxLDAgOS40MTY2Nyw0LjIxMzk2IDkuNDE2NjcsOS40MTY2N2MwLDUuMTk4IC00LjIxMzk2LDkuNDE2NjcgLTkuNDE2NjcsOS40MTY2N2MtNS4yMDI3MSwwIC05LjQxNjY3LC00LjIxODY3IC05LjQxNjY3LC05LjQxNjY3YzAsLTUuMjAyNzEgNC4yMTM5NiwtOS40MTY2NyA5LjQxNjY3LC05LjQxNjY3ek0xMTMsNjUuOTE2NjdjMjUuOTYxNzUsMCA0Ny4wODMzMywyMS4xMjE1OCA0Ny4wODMzMyw0Ny4wODMzM2MwLDI1Ljk2MTc1IC0yMS4xMjE1OCw0Ny4wODMzMyAtNDcuMDgzMzMsNDcuMDgzMzNjLTI1Ljk2MTc1LDAgLTQ3LjA4MzMzLC0yMS4xMjE1OCAtNDcuMDgzMzMsLTQ3LjA4MzMzYzAsLTI1Ljk2MTc1IDIxLjEyMTU4LC00Ny4wODMzMyA0Ny4wODMzMywtNDcuMDgzMzN6TTExMyw4MC4wNDE2N2MtMTguMjAyMzgsMCAtMzIuOTU4MzMsMTQuNzU1OTUgLTMyLjk1ODMzLDMyLjk1ODMzYzAsMTguMjAyMzggMTQuNzU1OTUsMzIuOTU4MzMgMzIuOTU4MzMsMzIuOTU4MzNjMTguMjAyMzgsMCAzMi45NTgzMywtMTQuNzU1OTUgMzIuOTU4MzMsLTMyLjk1ODMzYzAsLTE4LjIwMjM4IC0xNC43NTU5NSwtMzIuOTU4MzMgLTMyLjk1ODMzLC0zMi45NTgzM3oiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==")
+    50% 50% no-repeat;
+  background-size: 100%;
+}
+
+/*end icon css*/
+
+#footer {
+  height: 211px;
+  background-color: black;
+  padding-top: 10px;
+  color: white;
+  flex-direction: column;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c_icon {
+  width: 200px;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.f-c {
+  display: flex;
+  justify-content: space-between;
+}
+
+.f-c div {
+  /*word-spacing: .9rem;*/
+  margin-right: 10px;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contects {
+  font-weight: 100;
+  font-size: 14px;
+  word-spacing: 0.5rem;
+}
+
+.copy {
+  font-family: monospace;
+  font-size: 1.1rem;
+  padding: 10px 10px;
+  color: rgb(56 51 51);
+}
+
+/*keyframes*/
+@keyframes reveal_text_box {
+  50% {
+    width: 110%;
+    left: 0;
+  }
+
+  100% {
+    width: 0;
+    left: 110%;
+    box-shadow: 2px 2px 2px black;
+  }
+}
+
+@keyframes revealtextbox {
+  50% {
+    left: 0;
+    width: 110%;
+  }
+
+  100% {
+    width: 0;
+    left: 110%;
+    box-shadow: 2px 2px 2px black;
+  }
+}
+
+@keyframes text_reveal {
+  100% {
+    color: white;
+    text-shadow: 1px 1px 4px black;
+  }
+}
+
+@keyframes textreveal {
+  50% {
+    color: #dc143c;
+    text-shadow: 1px 1px 1px black;
+  }
+
+  100% {
+    color: #dc143c;
+
+    text-shadow: 2px 3px 2px black;
+  }
+}
+@keyframes bgc {
+  30% {
+    background: url("./134.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 15s;
+  }
+  40% {
+    /* background: url(https://images.wallpaperscraft.com/image/laptop_numbers_desktop_179926_3840x2160.jpg); */
+    background: url("./19187755.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 15s;
+  }
+  60% {
+    /* background:url(https://images.wallpaperscraft.com/image/laptop_phone_desktop_179989_3840x2160.jpg); */
+    background: url("./19187755.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 15s;
+  }
+  90% {
+    /* background: url(https://images.wallpaperscraft.com/image/laptop_screen_desktop_178819_3840x2160.jpg); */
+    background: url("./19187757.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 15s;
+  }
+  100% {
+    background: url("./130.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 8s;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .logo h1 {
+    font-size: 2.4rem;
+  }
+  .nav {
+    display: none;
+  }
+  .search img {
+    position: relative;
+    top: -18px;
+    left: 3px;
+    width: 22px;
+  }
+  #hero {
+    height: 650px;
+  }
+  #hero h1 {
+    font-size: 1rem;
+  }
+  .service_top p {
+    font-size: 1.2rem;
+    max-width: 316px;
+    margin-bottom: -34px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 10px solid #000;
+    line-height: 24px;
+    padding-bottom: 20px;
+    letter-spacing: 0.05rem;
+  }
+  #third_section {
+    height: auto;
+    flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+  }
+  .portfolio {
+    margin: 50px;
+  }
+  .pd {
+    font-weight: lighter;
+  }
+}
